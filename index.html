@@ -1,111 +1,147 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>My Portfolio</title>
-    <style>
-      @keyframes slidein {
-        from {
-          transform: translateX(-100%);
-        }
-        to {
-          transform: translateX(0%);
-        }
+
+<head>
+  <title>My Portfolio</title>
+  <style>
+    @keyframes slidein {
+      from {
+        transform: translateX(-100%);
       }
-      
+
+      to {
+        transform: translateX(0%);
+      }
+    }
+
+    h1 {
+      font-size: 48px;
+      font-weight: bold;
+      color: #333;
+      margin: 0 auto;
+      animation: slidein 1s ease-in-out;
+    }
+
+    @media (max-width: 768px) {
       h1 {
-        font-size: 48px;
-        font-weight: bold;
-        color: #333;
-        margin: 0 auto;
-        animation: slidein 1s ease-in-out;
+        font-size: 32px;
       }
-      
-      @media (max-width: 768px) {
-        h1 {
-          font-size: 32px;
-        }
-      }
-      
-      body {
-        margin: 0;
-        padding: 0;
-        font-family: Arial, sans-serif;
-      }
-      
-      .container {
-        max-width: 1200px;
-        margin: 0 auto;
-        padding: 40px;
-      }
-      
-      .header {
-        text-align: center;
-        padding: 20px 0;
-        background-color: #f7f7f7;
-      }
-      
-      .portfolio-item {
-        display: flex;
-        flex-direction: column;
-        margin-bottom: 40px;
-      }
-      
-      .portfolio-image {
-        flex: 1;
-        background-size: cover;
-        background-position: center;
-        height: 300px;
-      }
-      
-      .portfolio-title {
-        font-size: 24px;
-        font-weight: bold;
-        color: #333;
-        margin-top: 20px;
-        margin-bottom: 10px;
-      }
-      
-      .portfolio-description {
-        font-size: 18px;
-        color: #555;
-        margin-bottom: 20px;
-      }
-      
-      .portfolio-link {
-        font-size: 18px;
-        color: #333;
-        text-decoration: none;
-        border-bottom: 2px solid #333;
-        padding-bottom: 4px;
-        transition: all 0.2s ease-in-out;
-      }
-      
-      .portfolio-link:hover {
-        border-bottom: 2px solid #666;
-      }
-    </style>
-  </head>
-  <body>
-    <div class="header">
-      <h1>Welcome to my portfolio</h1>
+    }
+
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 40px;
+    }
+
+    .header {
+      text-align: center;
+      padding: 20px 0;
+      background-color: #f7f7f7;
+    }
+
+    .portfolio-item {
+      display: flex;
+      flex-direction: column;
+      margin-bottom: 40px;
+    }
+
+    .portfolio-image {
+      flex: 1;
+      background-size: cover;
+      background-position: center;
+      height: 300px;
+    }
+
+    .portfolio-title {
+      font-size: 24px;
+      font-weight: bold;
+      color: #333;
+      margin-top: 20px;
+      margin-bottom: 10px;
+    }
+
+    .portfolio-description {
+      font-size: 18px;
+      color: #555;
+      margin-bottom: 20px;
+    }
+
+    .portfolio-link {
+      font-size: 18px;
+      color: #333;
+      text-decoration: none;
+      border-bottom: 2px solid #333;
+      padding-bottom: 4px;
+      transition: all 0.2s ease-in-out;
+    }
+
+    .portfolio-link:hover {
+      border-bottom: 2px solid #666;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="header">
+    <h1>Welcome to my portfolio</h1>
+  </div>
+
+  <div class="container">
+    <div class="portfolio-item">
+      <div class="portfolio-image" style="background-image: url('image1.jpg');"></div>
+      <h2 class="portfolio-title">Project 1</h2>
+      <p class="portfolio-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ac est sapien. Fusce
+        vel sodales velit. Donec eu sem erat.</p>
+      <a href="#" class="portfolio-link">View project</a>
     </div>
-    
-    <div class="container">
-      <div class="portfolio-item">
-        <div class="portfolio-image" style="background-image: url('image1.jpg');"></div>
-        <h2 class="portfolio-title">Project 1</h2>
-        <p class="portfolio-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ac est sapien. Fusce vel sodales velit. Donec eu sem erat.</p>
+
+    <div class="portfolio-item">
+      <div class="portfolio-image" style="background-image: url('image2.jpg');"></div>
+      <h2 class="portfolio-title">Project 2</h2>
+      <p class="portfolio-description">Name: Faizan Arif
+
+        Introduction: I am a versatile graphic designer with a passion for creating innovative and impactful designs.
+        With over 5 years of experience, I have worked with a diverse range of clients and projects, from startups to
+        established brands. My skills include branding, print design, web design, and digital marketing.
+
+        Branding: I have designed logos, business cards, and other branding materials for a variety of clients. My
+        approach is to create designs that reflect the client's values and personality, while also being memorable and
+        effective. Some of my branding projects include:
+        Logo design for a local coffee shop
+        Brand identity for a new fashion brand
+        Business card design for a freelance writer
+        Print design: I have experience designing print materials such as brochures, flyers, and posters. I use my
+        knowledge of typography, color, and layout to create designs that are visually appealing and communicate the
+        client's message effectively. Some of my print design projects include:
+        Brochure design for a non-profit organization
+        Event poster design for a music festival
+        Packaging design for a skincare brand
+        Web design: I am skilled in designing websites that are user-friendly and visually appealing. I have experience
+        with HTML, CSS, and WordPress, and can create custom designs that are tailored to the client's needs. Some of my
+        web design projects include:
+        Website redesign for a local restaurant
+        Landing page design for an online course
+        E-commerce website design for a jewelry brand
+        Digital marketing: I have experience creating digital marketing materials such as social media graphics, email
+        newsletters, and digital ads. I use my design skills to create designs that are engaging and effective in
+        attracting and retaining customers. Some of my digital marketing projects include:
+        Social media graphics for a health and wellness brand
+        Email newsletter design for a fashion retailer
+        Digital ad design for a tech startup
+        Conclusion: As a graphic designer, I am passionate about creating designs that are not only visually appealing,
+        but also effective in communicating the client's message. I am always looking for new challenges and
+        opportunities to grow as a designer, and I would love to work with you on your next project./p>
         <a href="#" class="portfolio-link">View project</a>
-      </div>
-      
-      <div class="portfolio-item">
-        <div class="portfolio-image" style="background-image: url('image2.jpg');"></div>
-        <h2 class="portfolio-title">Project 2</h2>
-        <p class="portfolio-description">Sed ac est sapien. Fusce vel sodales velit. Donec eu sem erat. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-        <a href="#" class="portfolio-link">View project</a>
-      </div>
-      
-      <div class="portfolio-item">
-        <div class="portfolio-image" style="background-image: url('image3.jpg');"></div>
-        <h2 class="portfolio-title">Project 3</h2>
-        <p class="portfolio-description">
+    </div>
+
+    <div class="portfolio-item">
+      <div class="portfolio-image" style="background-image: url('image3.jpg');"></div>
+      <h2 class="portfolio-title">Project 3</h2>
+      <p class="portfolio-description">
