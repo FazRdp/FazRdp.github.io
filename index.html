@@ -1,120 +1,134 @@
 <!DOCTYPE html>
 <html>
-
 <head>
-  <title>My Portfolio</title>
-  <style>
-    @keyframes slidein {
-      from {
-        transform: translateX(-100%);
-      }
-
-      to {
-        transform: translateX(0%);
-      }
-    }
-
-    h1 {
-      font-size: 48px;
-      font-weight: bold;
-      color: #333;
-      margin: 0 auto;
-      animation: slidein 1s ease-in-out;
-    }
-
-    @media (max-width: 768px) {
-      h1 {
-        font-size: 32px;
-      }
-    }
-
-    body {
-      margin: 0;
-      padding: 0;
-      font-family: Arial, sans-serif;
-    }
-
-    .container {
-      max-width: 1200px;
-      margin: 0 auto;
-      padding: 40px;
-    }
-
-    .header {
-      text-align: center;
-      padding: 20px 0;
-      background-color: #f7f7f7;
-    }
-
-    .portfolio-item {
-      display: flex;
-      flex-direction: column;
-      margin-bottom: 40px;
-    }
-
-    .portfolio-image {
-      flex: 1;
-      background-size: cover;
-      background-position: center;
-      height: 300px;
-    }
-
-    .portfolio-title {
-      font-size: 24px;
-      font-weight: bold;
-      color: #333;
-      margin-top: 20px;
-      margin-bottom: 10px;
-    }
-
-    .portfolio-description {
-      font-size: 18px;
-      color: #555;
-      margin-bottom: 20px;
-    }
-
-    .portfolio-link {
-      font-size: 18px;
-      color: #333;
-      text-decoration: none;
-      border-bottom: 2px solid #333;
-      padding-bottom: 4px;
-      transition: all 0.2s ease-in-out;
-    }
-
-    .portfolio-link:hover {
-      border-bottom: 2px solid #666;
-    }
-  </style>
+	<title>Animated Website</title>
+	<style>
+		* {
+			box-sizing: border-box;
+			margin: 0;
+			padding: 0;
+		}
+		
+		body {
+			font-family: Arial, sans-serif;
+			background-color: #f2f2f2;
+		}
+		
+		.container {
+			display: flex;
+			flex-wrap: wrap;
+			padding: 20px;
+			max-width: 1200px;
+			margin: 0 auto;
+		}
+		
+		.header {
+			display: flex;
+			flex-direction: column;
+			flex: 1;
+			background-color: #fff;
+			border: 1px solid #ccc;
+			padding: 20px;
+			margin-right: 20px;
+			transition: all 0.2s ease-in-out;
+			position: relative;
+			z-index: 1;
+			min-height: 500px;
+		}
+		
+		.header:hover {
+			width: 200px;
+			margin-right: 0;
+			background-color: #333;
+			color: #fff;
+			border-color: #333;
+			cursor: pointer;
+			z-index: 2;
+			min-height: auto;
+			overflow: visible;
+		}
+		
+		.header:hover .nav {
+			display: flex;
+			flex-direction: column;
+			opacity: 1;
+			pointer-events: all;
+		}
+		
+		.header:hover .nav-item {
+			animation: slidein 1s ease-in-out;
+		}
+		
+		.nav {
+			display: none;
+			flex-direction: column;
+			position: absolute;
+			top: 0;
+			left: 100%;
+			background-color: #333;
+			padding: 20px;
+			opacity: 0;
+			pointer-events: none;
+			transition: all 0.2s ease-in-out;
+			z-index: 2;
+		}
+		
+		.nav-item {
+			font-size: 24px;
+			font-weight: bold;
+			color: #fff;
+			margin-bottom: 10px;
+			animation: none;
+		}
+		
+		.content {
+			flex: 2;
+			background-color: #fff;
+			border: 1px solid #ccc;
+			padding: 20px;
+		}
+		
+		h1 {
+			font-size: 48px;
+			font-weight: bold;
+			color: #333;
+			margin-bottom: 20px;
+		}
+		
+		p {
+			font-size: 18px;
+			color: #555;
+			line-height: 1.5;
+			margin-bottom: 20px;
+		}
+		
+		@keyframes slidein {
+			from {
+				opacity: 0;
+				transform: translateX(-100%);
+			}
+			to {
+				opacity: 1;
+				transform: translateX(0%);
+			}
+		}
+		
+		@media (max-width: 768px) {
+			.container {
+				flex-direction: column;
+			}
+			.header {
+				width: 100%;
+				margin-right: 0;
+				margin-bottom: 20px;
+			}
+			.header:hover {
+				width: 100%;
+			}
+		}
+	</style>
 </head>
-
 <body>
-  <div class="header">
-    <h1>Welcome to my portfolio</h1>
-  </div>
-
-  <div class="container">
-    <div class="portfolio-item">
-      <div class="portfolio-image" style="background-image: url('image1.jpg');"></div>
-      <h2 class="portfolio-title">Project 1</h2>
-      <p class="portfolio-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ac est sapien. Fusce
-        vel sodales velit. Donec eu sem erat.</p>
-      <a href="#" class="portfolio-link">View project</a>
-    </div>
-
-    <div class="portfolio-item">
-      <div class="portfolio-image" style="background-image: url('image2.jpg');"></div>
-      <h2 class="portfolio-title">Project 2</h2>
-      <p class="portfolio-description">Name: Faizan Arif
-        I am a professional Graphic Designer with over 5 years of experience in Photoshop, 
-Adobe Illustrator and Ms Office.
-        I have expertize of logo design, Presentation design, Flyer design, Social media post design
-
-    ./p>
-        <a href="#" class="portfolio-link">View project</a>
-    </div>
-
-    <div class="portfolio-item">
-      <div class="portfolio-image" style="background-image: url('image3.jpg');"></div>
-      <h2 class="portfolio-title">Project 3</h2>
-      <p class="portfolio-description">
+	<div class="container">
+		<div class="header">
+		
