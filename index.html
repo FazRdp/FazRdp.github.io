@@ -1,134 +1,182 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+
 <head>
-	<title>Animated Website</title>
-	<style>
-		* {
-			box-sizing: border-box;
-			margin: 0;
-			padding: 0;
-		}
-		
-		body {
-			font-family: Arial, sans-serif;
-			background-color: #f2f2f2;
-		}
-		
-		.container {
-			display: flex;
-			flex-wrap: wrap;
-			padding: 20px;
-			max-width: 1200px;
-			margin: 0 auto;
-		}
-		
-		.header {
-			display: flex;
-			flex-direction: column;
-			flex: 1;
-			background-color: #fff;
-			border: 1px solid #ccc;
-			padding: 20px;
-			margin-right: 20px;
-			transition: all 0.2s ease-in-out;
-			position: relative;
-			z-index: 1;
-			min-height: 500px;
-		}
-		
-		.header:hover {
-			width: 200px;
-			margin-right: 0;
-			background-color: #333;
-			color: #fff;
-			border-color: #333;
-			cursor: pointer;
-			z-index: 2;
-			min-height: auto;
-			overflow: visible;
-		}
-		
-		.header:hover .nav {
-			display: flex;
-			flex-direction: column;
-			opacity: 1;
-			pointer-events: all;
-		}
-		
-		.header:hover .nav-item {
-			animation: slidein 1s ease-in-out;
-		}
-		
-		.nav {
-			display: none;
-			flex-direction: column;
-			position: absolute;
-			top: 0;
-			left: 100%;
-			background-color: #333;
-			padding: 20px;
-			opacity: 0;
-			pointer-events: none;
-			transition: all 0.2s ease-in-out;
-			z-index: 2;
-		}
-		
-		.nav-item {
-			font-size: 24px;
-			font-weight: bold;
-			color: #fff;
-			margin-bottom: 10px;
-			animation: none;
-		}
-		
-		.content {
-			flex: 2;
-			background-color: #fff;
-			border: 1px solid #ccc;
-			padding: 20px;
-		}
-		
-		h1 {
-			font-size: 48px;
-			font-weight: bold;
-			color: #333;
-			margin-bottom: 20px;
-		}
-		
-		p {
-			font-size: 18px;
-			color: #555;
-			line-height: 1.5;
-			margin-bottom: 20px;
-		}
-		
-		@keyframes slidein {
-			from {
-				opacity: 0;
-				transform: translateX(-100%);
-			}
-			to {
-				opacity: 1;
-				transform: translateX(0%);
-			}
-		}
-		
-		@media (max-width: 768px) {
-			.container {
-				flex-direction: column;
-			}
-			.header {
-				width: 100%;
-				margin-right: 0;
-				margin-bottom: 20px;
-			}
-			.header:hover {
-				width: 100%;
-			}
-		}
-	</style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/utils.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/mobile.css">
+    <title>iBlog - Heaven for bloggers</title>
 </head>
+
 <body>
-	<div class="container">
-		<div class="header">
-		
+    <nav class="navigation max-width-1 m-auto">
+        <div class="nav-left">
+            <a href="/">
+                <span><img src="img/logo.png" width="94px" alt=""></span>
+            </a>
+            <ul>
+                <li><a href="/">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="/contact.html">Contact</a></li>
+            </ul>
+        </div>
+        <div class="nav-right">
+            <form action="/search.html" method="get">
+                <input class="form-input" type="text" name="query" placeholder="Article Search">
+                <button class="btn">Search</button>
+            </form>
+
+        </div>
+
+    </nav>
+    <div class="max-width-1 m-auto">
+        <hr>
+    </div>
+    <div class="m-auto content max-width-1 my-2">
+        <div class="content-left">
+            <h1>The heaven for bloggers</h1>
+            <p>iBlog is a website which lets you submit an article which upon approval will be up on our website and you
+                can get a good amount of reach from here!</p>
+            <p>My Halloween decorations are staying in the box this year. To be honest, they didn’t make it out of the
+                box last year either. My Halloween spirit has officially been bludgeoned to death by teenagers who no
+                longer care and a persistent October fear of the Northern California wildfires. And speaking of fear,
+                isn’t there more than enough of that going around? Maybe all of us can pretend that Halloween isn’t even
+                happening this year?</p>
+        </div>
+        <div class="content-right">
+            <img src="img/home.svg" alt="iBlog">
+        </div>
+    </div>
+
+    <div class="max-width-1 m-auto">
+        <hr>
+    </div>
+    <div class="home-articles max-width-1 m-auto font2">
+        <h2>Featured Articles</h2>
+        <div class="year-box adjust-year">
+            <div>
+                <h3>Year </h3>
+            </div>
+            <div>
+                <input type="radio" name="year" id=""> 2020
+            </div>
+            <div>
+                <input type="radio" name="year" id=""> 2021
+            </div>
+        </div>
+        <div class="home-article">
+            <div class="home-article-img">
+                <img src="img/3.png" alt="article">
+            </div>
+            <div class="home-article-content font1">
+                <a href="/blogpost.html">
+                    <h3>Lorem ipsum dolor sit amet consectetur adipisicing.</h3>
+                </a>
+
+                <div>Author Name</div>
+                <span>07 January | 6 min read</span>
+            </div>
+        </div>
+        <div class="home-article">
+            <div class="home-article-img">
+                <img src="img/1.png" alt="article">
+            </div>
+            <div class="home-article-content font1">
+                <a href="/blogpost.html">
+                    <h3>Lorem ipsum dolor sit amet consectetur adipisicing.</h3>
+                </a>
+
+                <div>Author Name</div>
+                <span>07 January | 6 min read</span>
+            </div>
+        </div>
+        <div class="home-article">
+            <div class="home-article-img">
+                <img src="img/2.png" alt="article">
+            </div>
+            <div class="home-article-content font1">
+                <a href="/blogpost.html">
+                    <h3>Lorem ipsum dolor sit amet consectetur adipisicing.</h3>
+                </a>
+
+                <div>Author Name</div>
+                <span>07 January | 6 min read</span>
+            </div>
+        </div>
+        <div class="home-article">
+            <div class="home-article-img">
+                <img src="img/1.png" alt="article">
+            </div>
+            <div class="home-article-content font1">
+                <a href="/blogpost.html">
+                    <h3>Lorem ipsum dolor sit amet consectetur adipisicing.</h3>
+                </a>
+
+                <div>Author Name</div>
+                <span>07 January | 6 min read</span>
+            </div>
+        </div>
+        <div class="home-article">
+            <div class="home-article-img">
+                <img src="img/11.svg" alt="article">
+            </div>
+            <div class="home-article-content font1">
+                <a href="/blogpost.html">
+                    <h3>Lorem ipsum dolor sit amet consectetur adipisicing.</h3>
+                </a>
+
+                <div>Author Name</div>
+                <span>07 January | 6 min read</span>
+            </div>
+        </div>
+        <div class="home-article">
+            <div class="home-article-img">
+                <img src="img/3.png" alt="article">
+            </div>
+            <div class="home-article-content font1">
+                <a href="/blogpost.html">
+                    <h3>Lorem ipsum dolor sit amet consectetur adipisicing.</h3>
+                </a>
+
+                <div>Author Name</div>
+                <span>07 January | 6 min read</span>
+            </div>
+        </div>
+        <div class="home-article">
+            <div class="home-article-img">
+                <img src="img/2.png" alt="article">
+            </div>
+            <div class="home-article-content font1">
+                <a href="/blogpost.html">
+                    <h3>Lorem ipsum dolor sit amet consectetur adipisicing.</h3>
+                </a>
+
+                <div>Author Name</div>
+                <span>07 January | 6 min read</span>
+            </div>
+        </div>
+        <div class="home-article">
+            <div class="home-article-img">
+                <img src="img/11.svg" alt="article">
+            </div>
+            <div class="home-article-content font1">
+                <a href="/blogpost.html">
+                    <h3>Lorem ipsum dolor sit amet consectetur adipisicing.</h3>
+                </a>
+
+                <div>Author Name</div>
+                <span>07 January | 6 min read</span>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="footer">
+        <p>Copyright &copy; iBlog.com </p>
+        <a href="https://www.vecteezy.com/free-vector/typewriter">Vector Credits: Vecteezy</a>
+    </div>
+</body>
+
+</html>
